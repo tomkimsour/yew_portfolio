@@ -9,4 +9,5 @@ edition = "2021"
 yew = "0.19"
 yew-router = "0.16"
 stylist = { version = "0.10", features = ["yew"]}
-
+serde = { version = "1" }
+serde_json = { version = "1" , features = ["std"]}

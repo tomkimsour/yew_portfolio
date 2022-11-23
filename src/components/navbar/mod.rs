@@ -1,2 +1,2 @@
-pub mod nav_item;
+pub mod navbar_component;
 pub mod navbar;

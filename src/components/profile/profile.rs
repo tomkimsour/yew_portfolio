@@ -3,8 +3,8 @@ use yew::prelude::*;
 use yew::function_component;
 
 
-#[function_component(Home)]
-pub fn home() -> Html {
+#[function_component(Profile)]
+pub fn profile() -> Html {
 
     html! {
         <>

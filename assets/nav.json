@@ -2,19 +2,19 @@
     "navItems":[
         {
             "name":"HOME",
-            "to":"/"
+            "to":"Route::Introduction"
         },
         {
             "name":"ABOUT",
-            "to":"/about"
+            "to":"Route::About"
         },
         {
             "name":"PROJECTS",
-            "to":"projects"
+            "to":"Route::Projects"
         },
         {
             "name":"CONTACT",
-            "to":"/contact"
+            "to":"Route::Contact"
         }
     ]
 }
