@@ -1,0 +1,52 @@
+@font-face {
+  font-family: NeueMontreal;
+  src: url("/fonts/PPNeueMontreal-Book.otf") format("opentype");
+}
+
+h1 {
+  font-size: 45px;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+p {
+  font-size: 12px;
+}
+
+a {
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  letter-spacing: 0pt;
+  font-size: 14px;
+  font-family:
+    "NeueMontreal",
+    Inter,
+    system-ui,
+    -apple-system, /*Firefox supports this but not yet `system-ui`*/
+    'Segoe UI', 
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji';
+}

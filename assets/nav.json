@@ -1,0 +1,20 @@
+{
+    "navItems":[
+        {
+            "name":"HOME",
+            "to":"/"
+        },
+        {
+            "name":"ABOUT",
+            "to":"/about"
+        },
+        {
+            "name":"PROJECTS",
+            "to":"projects"
+        },
+        {
+            "name":"CONTACT",
+            "to":"/contact"
+        }
+    ]
+}
