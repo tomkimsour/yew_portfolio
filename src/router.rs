@@ -7,6 +7,14 @@ use crate::pages::home::Home;
 pub enum Route {
     #[at("/")]
     Home,
+    #[at("/#profile")]
+    Profile,
+    #[at("/#about")]
+    About,
+    #[at("/#project")]
+    Project,
+    #[at("/#contact")]
+    Contact,
 }
 
 pub fn switch(route: &Route) -> Html {
