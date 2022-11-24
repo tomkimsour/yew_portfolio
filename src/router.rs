@@ -22,5 +22,17 @@ pub fn switch(route: &Route) -> Html {
         Route::Home => html!{
             <Home/>
         },
+        Route::Profile=> html!{
+            <Home/>
+        },
+        Route::About=> html!{
+            <Home/>
+        },
+        Route::Project => html!{
+            <Home/>
+        },
+        Route::Contact=> html!{
+            <Home/>
+        },
     }
 }
