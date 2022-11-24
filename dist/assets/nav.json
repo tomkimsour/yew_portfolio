@@ -1,0 +1,20 @@
+{
+    "navItems":[
+        {
+            "name":"HOME",
+            "to":"Route::Introduction"
+        },
+        {
+            "name":"ABOUT",
+            "to":"Route::About"
+        },
+        {
+            "name":"PROJECTS",
+            "to":"Route::Projects"
+        },
+        {
+            "name":"CONTACT",
+            "to":"Route::Contact"
+        }
+    ]
+}

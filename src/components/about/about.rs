@@ -1,5 +1,5 @@
 use yew::prelude::*;
-use crate::components::about::formation;
+use crate::components::about::formation::Formation;
 
 #[function_component(About)]
 pub fn about() -> Html {

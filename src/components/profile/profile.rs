@@ -1,19 +1,17 @@
 use stylist::yew::styled_component;
 use yew::prelude::*;
-use yew::function_component;
 
 
-#[function_component(Profile)]
+#[styled_component(Profile)]
 pub fn profile() -> Html {
 
     html! {
         <>
-            <h1>{"This is my home page"}</h1>
             <div className=" flex flex-nowrap box-border px-110px min-h-screen">
               <div className="min-w-1/2 bg-red-700	">
                 <img
                   className="object-cover w-100 h-85 pl-50"
-                  src="../assets/thomas-2022.jpeg"
+                  src="assets/me_and_la_pecou.png"
                   alt="picture of thomas ung"
                 />
               </div>

@@ -1,10 +1,12 @@
 use yew::prelude::*;
 use stylist::yew::styled_component;
+use crate::Route;
+use yew_router::prelude::Link;
 
 
-#[derive(Properties, PartialEq)]
+#[derive(Properties,Clone, PartialEq)]
 pub struct NavItemProps {
-    pub to: String,
+    pub to: Route,
     pub name: String,
 }
 
@@ -15,7 +17,7 @@ pub fn nav_item(props: &NavItemProps) -> Html {
     html! {
         <>
             <li className="inline-block">
-                <Link<Route> class="px-15px" to={props.to}>{ props.name }</Link<Route>>
+                <Link<Route> classes="px-15px" to={props.to.clone()}>{ props.name.clone() }</Link<Route>>
             </li>
         </>
     }

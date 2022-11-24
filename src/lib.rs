@@ -5,13 +5,14 @@ mod pages;
 use yew::prelude::*;
 use yew_router::prelude::*;
 use router::{switch,Route};
+use crate::components::navbar::navbar::Navbar;
 
 #[function_component(App)]
 pub fn app() -> Html {
     html! {
         // Should load the css for the whole App
         <BrowserRouter>
-          // <Navbar />
+          <Navbar/>
           // <ErrorMessage />
           <Switch<Route> render={Switch::render(switch)} />
         </BrowserRouter>
