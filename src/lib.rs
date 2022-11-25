@@ -1,11 +1,11 @@
-mod router;
 mod components;
 mod pages;
+mod router;
 
+use crate::components::navbar::navbar::Navbar;
+use router::{switch, Route};
 use yew::prelude::*;
 use yew_router::prelude::*;
-use router::{switch,Route};
-use crate::components::navbar::navbar::Navbar;
 
 #[function_component(App)]
 pub fn app() -> Html {

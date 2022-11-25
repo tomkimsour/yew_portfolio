@@ -1,7 +1,6 @@
+use crate::pages::home::Home;
 use yew::prelude::*;
 use yew_router::prelude::*;
-use crate::pages::home::Home;
-
 
 #[derive(Clone, Routable, PartialEq)]
 pub enum Route {
@@ -19,19 +18,19 @@ pub enum Route {
 
 pub fn switch(route: &Route) -> Html {
     match route {
-        Route::Home => html!{
+        Route::Home => html! {
             <Home/>
         },
-        Route::Profile=> html!{
+        Route::Profile => html! {
             <Home/>
         },
-        Route::About=> html!{
+        Route::About => html! {
             <Home/>
         },
-        Route::Project => html!{
+        Route::Project => html! {
             <Home/>
         },
-        Route::Contact=> html!{
+        Route::Contact => html! {
             <Home/>
         },
     }

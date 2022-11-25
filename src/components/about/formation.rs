@@ -1,59 +1,48 @@
+use crate::components::about::formation_component::formation_description::FormationDescription;
+use crate::components::about::formation_component::formation_name::FormationName;
+use crate::components::about::formation_component::formation_place::FormationPlace;
+use crate::components::about::formation_component::formation_year::FormationYear;
+use stylist::yew::styled_component;
 use yew::prelude::*;
 
-#[function_component(Formation)]
-pub fn formation(props: &Props) -> Html {
-    html!{
+#[derive(Clone, PartialEq)]
+pub struct FormationStruct {
+    pub id: u16,
+    pub name: String,
+    pub description: String,
+    pub year: String,
+    pub place: String,
+}
+#[derive(Properties, Clone, PartialEq)]
+pub struct FormationProps {
+    pub category_title: String,
+    pub formations: Vec<FormationStruct>,
+}
+
+#[styled_component(Formation)]
+pub fn formation(props: &FormationProps) -> Html {
+    html! {
         <section className="education">
-          <h2>{props.categoryTitle}</h2>
-          {props.formations.map((value, key: number) => {
-            return (
-              <div className="formation" key={key}>
-                <div className="left-wrapper">
-                  <FormationName name={value.name} />
-                  <FormationDescription
-                    description={value.description}
-                  />
+          <h2>{props.category_title.clone()}</h2>
+          {
+            props.clone().formations.
+            into_iter().map( |formation| {
+              html!{
+                <div className="formation" key={formation.id}>
+                  <div className="left-wrapper">
+                    <FormationName name={formation.name} />
+                    <FormationDescription
+                      description={formation.description}
+                    />
+                  </div>
+                  <div className="right-wrapper">
+                    <FormationYear year={formation.year} />
+                    <FormationPlace place={formation.place} />
+                  </div>
                 </div>
-                <div className="right-wrapper">
-                  <FormationYear year={value.year} />
-                  <FormationPlace place={value.place} />
-                </div>
-              </div>
-            );
-          })}
+              }
+            }).collect::<Html>()
+          }
         </section>
     }
 }
-
-// import { Formation, FormationCategory } from "./Interfaces.ts";
-// import {
-//   FormationDescription,
-//   FormationName,
-//   FormationPlace,
-//   FormationYear,
-// } from "./FormationComponent/index.ts";
-
-// const Formation = (props: FormationCategory) => {
-//   return (
-//     <section className="education">
-//       <h2>{props.categoryTitle}</h2>
-//       {props.formations.map((value, key: number) => {
-//         return (
-//           <div className="formation" key={key}>
-//             <div className="left-wrapper">
-//               <FormationName name={value.name} />
-//               <FormationDescription
-//                 description={value.description}
-//               />
-//             </div>
-//             <div className="right-wrapper">
-//               <FormationYear year={value.year} />
-//               <FormationPlace place={value.place} />
-//             </div>
-//           </div>
-//         );
-//       })}
-//     </section>
-//   );
-// };
-

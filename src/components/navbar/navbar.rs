@@ -1,10 +1,9 @@
+use crate::components::navbar::navbar_component::nav_item::{NavItem, NavItemProps};
+use crate::Route;
 use stylist::yew::styled_component;
 use yew::prelude::*;
-use crate::Route;
-use crate::components::navbar::navbar_component::nav_item::{NavItem,NavItemProps};
 
-
-#[derive(Properties,Clone, PartialEq)]
+#[derive(Properties, Clone, PartialEq)]
 pub struct NavBarProps {
     pub key: u16,
     pub nav_item: NavItemProps,
@@ -12,12 +11,35 @@ pub struct NavBarProps {
 
 #[styled_component(Navbar)]
 pub fn navbar() -> Html {
-
     let nav_items = vec![
-        NavBarProps{key : 0, nav_item : NavItemProps{name :"Introduction".to_string(), to : Route::Profile}},
-        NavBarProps{key : 1, nav_item : NavItemProps{name :"About".to_string(), to : Route::About}},
-        NavBarProps{key : 2, nav_item : NavItemProps{name :"Projects".to_string(), to : Route::Project}},
-        NavBarProps{key : 3, nav_item : NavItemProps{name :"Contact".to_string(), to : Route::Contact}},
+        NavBarProps {
+            key: 0,
+            nav_item: NavItemProps {
+                name: "Introduction".to_string(),
+                to: Route::Profile,
+            },
+        },
+        NavBarProps {
+            key: 1,
+            nav_item: NavItemProps {
+                name: "About".to_string(),
+                to: Route::About,
+            },
+        },
+        NavBarProps {
+            key: 2,
+            nav_item: NavItemProps {
+                name: "Projects".to_string(),
+                to: Route::Project,
+            },
+        },
+        NavBarProps {
+            key: 3,
+            nav_item: NavItemProps {
+                name: "Contact".to_string(),
+                to: Route::Contact,
+            },
+        },
     ];
 
     html! {
@@ -34,4 +56,3 @@ pub fn navbar() -> Html {
         </>
     }
 }
-

@@ -1,7 +1,17 @@
 use yew::prelude::*;
+use stylist::yew::styled_component;
 
 
-// const FormationDescription = (props: { description: string }) => {
-//   return <div className="formation-description">{props.description}</div>;
-// };
+#[derive(Properties, Clone, PartialEq)]
+pub struct FormationDescriptionProps{
+  pub description : String,
+}
+
+#[styled_component(FormationDescription)]
+pub fn formation_description(props: &FormationDescriptionProps) -> Html {
+
+    html! {
+        <div class="formation-description">{props.description.clone()}</div>
+    }
+}
 
