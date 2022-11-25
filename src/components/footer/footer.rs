@@ -1,11 +1,8 @@
 use stylist::yew::styled_component;
 use yew::prelude::*;
 
-#[derive(Properties, Clone, PartialEq)]
-pub struct Props;
-
 #[styled_component(Footer)]
-pub fn footer(props: &Props) -> Html {
+pub fn footer() -> Html {
     let mail = "thomas.ung.pro@gmail.com";
     // const copyToClipboard = () => {
     //   navigator.clipboard.writeText(mail);

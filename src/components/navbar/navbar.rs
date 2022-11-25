@@ -3,7 +3,7 @@ use crate::Route;
 use stylist::yew::styled_component;
 use yew::prelude::*;
 
-#[derive(Properties, Clone, PartialEq)]
+#[derive(Clone, PartialEq)]
 pub struct NavBarProps {
     pub key: u16,
     pub nav_item: NavItemProps,
