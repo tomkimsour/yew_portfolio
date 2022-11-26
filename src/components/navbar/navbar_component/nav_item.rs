@@ -4,14 +4,14 @@ use yew::prelude::*;
 use yew_router::prelude::*;
 
 #[derive(Properties, Clone, PartialEq)]
-pub struct NavItemProps {
-    pub to: Route,
+pub struct RefNavItemProps {
+    pub to: String,
     pub name: String,
 }
 
-#[styled_component(NavItem)]
-pub fn nav_item(props: &NavItemProps) -> Html {
-    let button_styleshee : StyleSource = css!(
+#[styled_component(RefNavItem)]
+pub fn ref_nav_item(props: &RefNavItemProps) -> Html {
+    let button_stylesheet : StyleSource = css!(
         r#"
             padding-left : 15px;
             padding-right: 15px;
@@ -20,7 +20,8 @@ pub fn nav_item(props: &NavItemProps) -> Html {
     html! {
         <>
             <li class="inline-block">
-                <Link<Route>  to={props.to.clone()} classes={classes!(button_styleshee)}>{ props.name.clone() }</Link<Route>>
+                // <Link<Route>  to={props.to.clone()} classes={classes!(button_styleshee)}>{ props.name.clone() }</Link<Route>>
+                <a class={classes!(button_stylesheet)} href={props.to.clone()}>{props.name.clone()}</a>
             </li>
         </>
     }
