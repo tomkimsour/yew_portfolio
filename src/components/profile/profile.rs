@@ -1,6 +1,5 @@
 use stylist::yew::styled_component;
 use yew::prelude::*;
-use crate::components::button::button::Button;
 
 #[styled_component(Profile)]
 pub fn profile() -> Html {
@@ -28,9 +27,6 @@ pub fn profile() -> Html {
                         information
                     "}
                   </p>
-                </div>
-                <div>
-                  <Button name={"ABOUT"} />
                 </div>
               </div>
             </div>

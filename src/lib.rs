@@ -2,7 +2,12 @@ mod components;
 mod pages;
 mod router;
 
-use crate::components::navbar::navbar::Navbar;
+use crate::components::{
+  footer::footer::Footer, 
+  navbar::navbar::Navbar,
+  button::color_theme_button::ColorThemeButton
+};
+
 use router::{switch, Route};
 use yew::prelude::*;
 use yew_router::prelude::*;
@@ -14,7 +19,9 @@ pub fn app() -> Html {
         <BrowserRouter>
           <Navbar/>
           // <ErrorMessage />
-          <Switch<Route> render={Switch::render(switch)} />
+          <ColorThemeButton/>
+          <Switch<Route> render={switch} />
+          <Footer/>
         </BrowserRouter>
     }
 }

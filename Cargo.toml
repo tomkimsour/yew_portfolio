@@ -6,9 +6,9 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-yew = "0.19"
-yew-router = "0.16"
-stylist = { version = "0.10", features = ["yew"]}
+yew = {version = "0.20", features = ["csr"]}
+yew-router = "0.17"
+stylist = { version = "0.11", features = ["yew"]}
 serde = { version = "1" }
 serde_json = { version = "1" , features = ["std"]}
 gloo = { version = "0.8" }

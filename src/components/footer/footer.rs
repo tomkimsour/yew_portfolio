@@ -8,7 +8,7 @@ pub fn footer() -> Html {
     //   navigator.clipboard.writeText(mail);
     // };
     html! {
-     <footer class="footer bg-black text-white px-110px">
+     <footer id="contact" class="footer bg-black text-white px-110px">
       <div class="container">
         <div id="contact-me" class="flex-col py-20">
           <h1>{"Contact me"}</h1>

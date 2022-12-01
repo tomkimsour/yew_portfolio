@@ -1,19 +1,18 @@
 use yew::prelude::*;
-// use router::{switch,Route};
 
 use crate::components::{
-    footer::footer::Footer, 
     profile::profile::Profile,
-    about::about::About
+    about::about::About,
+    project::projects::Projects
 };
 
 #[function_component(Home)]
 pub fn home() -> Html {
     html! {
-        <>
+        <div class="h-full flex flex-nowrap flex-col px-36">
             <Profile/>
             <About/>
-            <Footer/>
-        </>
+            <Projects/>
+        </div>
     }
 }
