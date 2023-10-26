@@ -19,12 +19,12 @@ pub fn techno(props: &TechnoProps) -> Html {
     let title = props.category_title.clone();
     let technos = props.clone().technos;
     html! {
-    <div>
+    <div class="pr-2">
       <h2 class="categoryTitle">{title}</h2>
       {
         technos.iter().map(|techno| html!{
           <div key={techno.key}>
-            <div class="title">
+            <div class="title cyan-text">
               {techno.title.clone()}
             </div>
             <div>{techno.names.join(", ")}</div>

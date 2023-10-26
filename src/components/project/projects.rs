@@ -15,35 +15,6 @@ pub fn projects() -> Html {
         projects: vec![
             ProjectProps{
                 key:1,
-                image: "assets/video_converter.png".to_string(),
-                title: "Othello".to_string(),
-                description: "School project where the goal was to create an othello ai using min-max with alpha pruning algorithm".to_string(),
-                tech_list: vec![
-                    "Go".to_string(),
-                    "Java".to_string()
-                ],
-                year:"2021".to_string(),
-                url: "https://github.com/tomkimsour/Othello".to_string(),
-            },
-            ProjectProps{
-                key:2,
-                image: "assets/othello.png".to_string(),
-                title: "video converter".to_string(),
-                description: "This project was an introduction to cloud services. During the course we had to present a small state of the art of a field of cloud computing. This project was related to the course and we had to implement a video format converter that would scale up and down depending on the number of current requests.".to_string(),
-                tech_list: vec![
-                    "React".to_string(),
-                    "Tailwind".to_string(),
-                    "Flask".to_string(),
-                    "Kubernetes".to_string(),
-                    "Graphana".to_string(),
-                    "Docker".to_string(),
-                    "GCP".to_string(),
-                ],
-                year:"2021".to_string(),
-                url: "https://github.com/tomkimsour/video-converter".to_string(),
-            },
-            ProjectProps{
-                key:3,
                 image: "assets/robocup_2022.JPG".to_string(),
                 title: "Robocup@Home 🤖💙".to_string(),
                 description: "The Robocup@Home is a league within the famous international Robocup competition. The goal of this league is to drive research on robot assistant applications. During the competition, the robot will have to execute various tasks such as welcoming guests and introducing them to everyone.
@@ -66,6 +37,35 @@ pub fn projects() -> Html {
                 url: "https://www.enib.fr/~robobreizh/src/en/index_en.html".to_string(),
             },
             ProjectProps{
+                key:2,
+                image: "assets/video_converter.png".to_string(),
+                title: "Othello".to_string(),
+                description: "School project where the goal was to create an othello ai using min-max with alpha pruning algorithm".to_string(),
+                tech_list: vec![
+                    "Go".to_string(),
+                    "Java".to_string()
+                ],
+                year:"2021".to_string(),
+                url: "https://github.com/tomkimsour/Othello".to_string(),
+            },
+            ProjectProps{
+                key:3,
+                image: "assets/othello.png".to_string(),
+                title: "video converter".to_string(),
+                description: "This project was an introduction to cloud services. During the course we had to present a small state of the art of a field of cloud computing. This project was related to the course and we had to implement a video format converter that would scale up and down depending on the number of current requests.".to_string(),
+                tech_list: vec![
+                    "React".to_string(),
+                    "Tailwind".to_string(),
+                    "Flask".to_string(),
+                    "Kubernetes".to_string(),
+                    "Graphana".to_string(),
+                    "Docker".to_string(),
+                    "GCP".to_string(),
+                ],
+                year:"2021".to_string(),
+                url: "https://github.com/tomkimsour/video-converter".to_string(),
+            },
+            ProjectProps{
                 key:4,
                 image: "assets/advent_of_code.jpeg".to_string(),
                 title: "Advent of code".to_string(),
@@ -80,7 +80,7 @@ pub fn projects() -> Html {
             },
             ProjectProps{
                 key:5,
-                image: "assets/RL_intro.png".to_string(),
+                image: "assets/multiarm_bandit.png".to_string(),
                 title: "Qlearning and multi arm bandit".to_string(),
                 description: "This project was an introduction to reinforcement learning using Q learning and multi arm bandit.".to_string(),
                 tech_list: vec![
@@ -106,7 +106,7 @@ pub fn projects() -> Html {
 
     html! {
         <>
-            <div id="project" class="flex flex-col flex-nowrap box-border px-110px min-h-screen">
+            <div id="project" class="flex flex-col flex-nowrap box-border px-110px min-h-screen  min-h-full">
                 <h1>{"Selected projects"}</h1>
                 // <div class="grid grid-cols-3">
                 <div class="grid grid-cols-3 gap-y-10 gap-x-6">

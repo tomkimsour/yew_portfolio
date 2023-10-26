@@ -21,13 +21,13 @@ pub fn about() -> Html {
                 year: "2020-2022".to_string(),
                 place: "Université de Bretagne occidentale, France".to_string(),
             },
-            FormationStruct {
-                id: 3,
-                name: "Bachelor degree in computer science".to_string(),
-                description: "Fondations and applications".to_string(),
-                year: "2017-2020".to_string(),
-                place: "Université de Bretagne occidentale, France".to_string(),
-            },
+            // FormationStruct {
+            //     id: 3,
+            //     name: "Bachelor degree in computer science".to_string(),
+            //     description: "Fondations and applications".to_string(),
+            //     year: "2017-2020".to_string(),
+            //     place: "Université de Bretagne occidentale, France".to_string(),
+            // },
         ],
     };
 
@@ -73,7 +73,7 @@ pub fn about() -> Html {
     };
 
     let language_props = LanguageProps{
-        category_title: "Language".to_string(),
+        category_title: "Languages".to_string(),
         languages : vec![LanguageStruct{
             key:1,
             name:"French".to_string(),
@@ -144,25 +144,36 @@ pub fn about() -> Html {
     };
 
     html! {
-        <div class="h-full about" id="about">
+        <div class="h-full min-h-screen min-h-full" id="about">
           <h1>{"Research Engineer"}</h1>
-          <Formation
-            category_title={formation_props.category_title}
-            formations={formation_props.formations}
-          />
-          <Techno
-            category_title={technos_props.category_title}
-            technos={technos_props.technos}
-          />
-          <Languages
-            category_title={language_props.category_title}
-            languages={language_props.languages}
-          />
-
-          <Experience
-            category_title={experience_props.category_title}
-            experiences={experience_props.experiences}
-          />
+          <div class="flex flex-row">
+          <div id="wrapper-left" class="flex flex-col w-6/12">
+            <Formation
+                category_title={formation_props.category_title}
+                formations={formation_props.formations}
+            />
+            <div class="flex flex-row w-full">
+                <div class="w-6/12">
+                    <Techno
+                        category_title={technos_props.category_title}
+                        technos={technos_props.technos}
+                    />
+                </div>
+                <div class="w-6/12">
+                    <Languages
+                        category_title={language_props.category_title}
+                        languages={language_props.languages}
+                    />
+                </div>
+            </div>
+          </div>
+          <div id="wrapper-right w-2/12 pr-20">
+            <Experience
+                category_title={experience_props.category_title}
+                experiences={experience_props.experiences}
+            />
+          </div>
+          </div>
         </div>
     }
 }

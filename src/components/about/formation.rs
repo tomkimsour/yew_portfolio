@@ -22,24 +22,24 @@ pub struct FormationProps {
 #[styled_component(Formation)]
 pub fn formation(props: &FormationProps) -> Html {
     html! {
-        <section className="education">
+        <section class="py-2">
           <h2>{props.category_title.clone()}</h2>
           {
             props.clone().formations.
             into_iter().map( |formation| {
               html!{
-                <div className="formation" key={formation.id}>
-                  <div className="left-wrapper">
-                    <FormationName name={formation.name} />
-                    <FormationDescription
-                      description={formation.description}
-                    />
+                  <div class="formation flex flex-row w-full" key={formation.id}>
+                    <div class="w-6/12">
+                      <FormationName name={formation.name} />
+                      <FormationDescription
+                        description={formation.description}
+                      />
+                    </div>
+                    <div class="grey-text w-6/12">
+                      <FormationYear year={formation.year} />
+                      <FormationPlace place={formation.place} />
+                    </div>
                   </div>
-                  <div className="right-wrapper">
-                    <FormationYear year={formation.year} />
-                    <FormationPlace place={formation.place} />
-                  </div>
-                </div>
               }
             }).collect::<Html>()
           }

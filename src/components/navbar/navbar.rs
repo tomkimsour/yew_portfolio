@@ -14,21 +14,21 @@ pub fn navbar() -> Html {
         NavBarProps {
             key: 1,
             nav_item: RefNavItemProps {
-                name: "About".to_string(),
+                name: "ABOUT".to_string(),
                 to: "#about".to_string(),
             },
         },
         NavBarProps {
             key: 2,
             nav_item: RefNavItemProps {
-                name: "Projects".to_string(),
+                name: "PROJECTS".to_string(),
                 to: "#project".to_string(),
             },
         },
         NavBarProps {
             key: 3,
             nav_item: RefNavItemProps {
-                name: "Contact".to_string(),
+                name: "CONTACT".to_string(),
                 to: "#contact".to_string(),
             },
         },

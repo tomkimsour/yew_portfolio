@@ -1,32 +1,35 @@
-use stylist::yew::styled_component;
 use yew::prelude::*;
 
-#[styled_component(Profile)]
+#[function_component(Profile)]
 pub fn profile() -> Html {
     html! {
         <>
             <div class=" flex flex-nowrap box-border px-110px min-h-screen">
-              <div class="min-w-1/2 bg-red-700	">
-                <img
-                  class="object-cover w-100 h-85 pl-50"
-                  src="assets/me_and_la_pecou.png"
-                  alt="picture of thomas ung"
-                />
+              <div class="w-6/12 h-full">
+                <div id="profile-image-wrapper" class="overflow-hidden pt-32 px-12">
+                  <img
+                    class="object-cover"
+                    src="assets/IMG_20230429_112845__01.jpeg"
+                    alt="picture of thomas ung"
+                  />
+                </div>
               </div>
-              <div class="pt-63 ml-76 mr-24 w-1/2 h-full">
-                <div class="pb-3">
-                  <h1 class="font-bold">
-                    {"Thomas UNG"}
-                  </h1>
-                  <h2 class="pb-3">{"Research Engineer"}</h2>
-                  <p>
-                    {"
-                        Bonjour, bonjour ! I'm a french research engineer that works in the
-                        robotic field. On the side, I like learning various stuff and doing
-                        some sport. Feel free to give a look around the website for more
-                        information
-                    "}
-                  </p>
+              <div class="w-6/12 h-full">
+                <div class="pt-40 pl-4">
+                  <div class="">
+                    <h1 class="font-bold">
+                      {"Thomas UNG"}
+                    </h1>
+                    <h2 class="pb-3">{"Research Engineer"}</h2>
+                    <p>
+                      {"
+                          Bonjour, bonjour! I'm a French research engineer working in the field of
+                          robotics field. On the side, I like to learn different things and do 
+                          some sports. Feel free to browse around the website for more
+                          more information
+                      "}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

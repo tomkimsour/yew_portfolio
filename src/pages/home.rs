@@ -9,7 +9,7 @@ use crate::components::{
 #[function_component(Home)]
 pub fn home() -> Html {
     html! {
-        <div class="h-full flex flex-nowrap flex-col px-36">
+        <div class="h-full flex flex-nowrap flex-col px-24 pb-20">
             <Profile/>
             <About/>
             <Projects/>

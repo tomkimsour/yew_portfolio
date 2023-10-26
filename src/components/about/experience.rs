@@ -19,10 +19,10 @@ pub struct ExperienceProps {
 pub fn experience(props: &ExperienceProps) -> Html {
     html! {
         <div>
-          <h2 class="categoryTitle">{props.category_title.clone()}</h2>
+          <h2 class="">{props.category_title.clone()}</h2>
           {props.experiences.iter().map( |experience| html!{
-            <div class="experience" key={experience.key}>
-                <div class="title">
+            <div id="experience" class="py-2" key={experience.key}>
+                <div class="title cyan-text">
                 {experience.title.clone()}
                 </div>
                 if !experience.description.is_empty(){
@@ -31,7 +31,7 @@ pub fn experience(props: &ExperienceProps) -> Html {
                     </div>
                 }
                 
-                <div class="technos">{experience.technos.join(", ")}</div>
+                <div class="technos grey-text">{experience.technos.join(", ")}</div>
             </div>
           }).collect::<Html>()
         }

@@ -4,23 +4,23 @@
 }
 
 h1 {
-  font-size: 60pt;
-}
-
-h2 {
   font-size: 30pt;
 }
 
+h2 {
+  font-size: 18pt;
+}
+
 h3 {
-  font-size: 24pt;
+  font-size: 16pt;
 }
 
 p {
-  font-size: 16pt;
+  font-size: 10pt;
 }
 
 a {
-  font-size: 16pt;
+  font-size: 10pt;
 }
 
 * {
@@ -49,4 +49,12 @@ body {
     sans-serif,
     'Apple Color Emoji',
     'Segoe UI Emoji';
+}
+
+.cyan-text{
+  color : #67AAED;
+}
+
+.grey-text{
+  color: #959595;
 }

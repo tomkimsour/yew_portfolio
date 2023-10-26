@@ -1,4 +1,4 @@
-use stylist::{yew::styled_component };
+use stylist::yew::styled_component;
 use yew::prelude::*;
 
 #[derive(Properties, Clone, PartialEq)]
