@@ -28,14 +28,14 @@ pub fn formation(props: &FormationProps) -> Html {
             props.clone().formations.
             into_iter().map( |formation| {
               html!{
-                  <div class="formation flex flex-row w-full justify-item-center h-1/3" key={formation.id}>
-                    <div class="w-6/12">
+                  <div class="formation flex flex-row justify-item-center" key={formation.id}>
+                    <div class="">
                       <FormationName name={formation.name} />
                       <FormationDescription
                         description={formation.description}
                       />
                     </div>
-                    <div class="grey-text w-6/12">
+                    <div class="grey-text">
                       <FormationYear year={formation.year} />
                       <FormationPlace place={formation.place} />
                     </div>

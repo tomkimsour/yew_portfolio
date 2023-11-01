@@ -145,40 +145,33 @@ pub fn about() -> Html {
     };
 
     html! {
-        // <div class="h-full min-h-screen min-h-full flex flex-col justify-stretch py-12" id="about">
-        <div class="h-full min-h-screen min-h-full grid gap-4 grid-col-2 content-center" id="about">
+        <div class="h-full min-h-screen min-h-full grid gap-2 content-center" id="about">
             <h1>{"Research engineer"}</h1>
-            // <div class="flex flex-row grow">
-            <div class="grid grid-rows-4 grid-col-4 gap-4 conten-center">
-                // <div id="wrapper-left" class="flex flex-col w-7/12 grid justify-item-center">
-                    // <div class="h-6/12">
-                <div class="col-span-2 row-span-2">
+            <div class="grid grid-rows-2 grid-cols-4 gap-4 grid-flow-row-dense">
+                <div class="col-span-2 row-span-1 border border-purple-700">
                     <Formation
                         category_title={formation_props.category_title}
                         formations={formation_props.formations}
                     />
                 </div>
-                <div class="col-span-2 row-span-4">
+                <div class="col-span-2 row-span-2">
                     <Experience
                         category_title={experience_props.category_title}
                         experiences={experience_props.experiences}
                     />
                 </div>
-                    // <div class="grid grid-col grid-col-2">
-                <div class="col-span-1 row-span-1">
+                <div class="row-span-1">
                     <Technos
                         category_title={technos_props.category_title}
                         technos={technos_props.technos}
                     />
                 </div>
-                        // <div class="w-6/12">
-                <div class="col-span-1 row-span-1">
+                <div class="row-span-1">
                     <Languages
                         category_title={language_props.category_title}
                         languages={language_props.languages}
                     />
                 </div>
-                // <div id="wrapper-right" class="w-3/12 pr-20">
             </div>
             <div class="flex flex-col justify-item-start h-1/6">
                 <Button name="DOWNLOAD RESUME"/>

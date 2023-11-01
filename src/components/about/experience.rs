@@ -26,12 +26,12 @@ pub fn experience(props: &ExperienceProps) -> Html {
                 {experience.title.clone()}
                 </div>
                 if !experience.description.is_empty(){
-                    <div class="description">
+                    <div>
                         {experience.description.clone()}
                     </div>
                 }
                 
-                <div class="technos grey-text">{experience.technos.join(", ")}</div>
+                <div class="grey-text">{experience.technos.join(", ")}</div>
             </div>
           }).collect::<Html>()
         }
