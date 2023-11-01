@@ -18,23 +18,25 @@ pub struct ExperienceProps {
 #[styled_component(Experience)]
 pub fn experience(props: &ExperienceProps) -> Html {
     html! {
-        <div>
+        <section>
           <h2 class="">{props.category_title.clone()}</h2>
-          {props.experiences.iter().map( |experience| html!{
-            <div id="experience" class="py-2" key={experience.key}>
-                <div id="cyan-text" class="title cyan-text">
-                {experience.title.clone()}
-                </div>
-                if !experience.description.is_empty(){
-                    <div>
-                        {experience.description.clone()}
+          <div class="w-5/6 grid gap-2">
+            {props.experiences.iter().map( |experience| html!{
+                <div id="experience" key={experience.key}>
+                    <div class="title cyan-text">
+                    {experience.title.clone()}
                     </div>
-                }
-                
-                <div class="grey-text">{experience.technos.join(", ")}</div>
-            </div>
-          }).collect::<Html>()
-        }
-        </div>
+                    if !experience.description.is_empty(){
+                        <div>
+                            {experience.description.clone()}
+                        </div>
+                    }
+                    
+                    <div class="grey-text">{experience.technos.join(", ")}</div>
+                </div>
+            }).collect::<Html>()
+            }
+          </div>
+        </section>
     }
 }

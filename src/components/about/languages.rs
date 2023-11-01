@@ -16,17 +16,19 @@ pub struct LanguageProps {
 #[styled_component(Languages)]
 pub fn languages(props: &LanguageProps) -> Html {
     html! {
-        <div>
-          <h2 class="">{props.category_title.clone()}</h2>
+        <section class="flex flex-col justify-start justify-items-center">
+          <h2>{props.category_title.clone()}</h2>
+          <div class="grid gap-2">
           {props.languages.iter().map( |language| html!{
-              <div class="language" key={language.key}>
-                <div id="cyan-text" class="title cyan-text">
-                  {language.name.clone()}
+                <div class="grid grid-cols-2" key={language.key}>
+                  <div class="title cyan-text">
+                    {language.name.clone()}
+                  </div>
+                  <div class="grey-text">{language.level.clone()}</div>
                 </div>
-                <div class="level">{language.level.clone()}</div>
-              </div>
-          }).collect::<Html>()
-        }
-        </div>
+            }).collect::<Html>()
+          }
+          </div>
+        </section>
     }
 }

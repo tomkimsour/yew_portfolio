@@ -53,16 +53,11 @@ nav {
   margin-top: 45px;
 }
 
-/* nav button {
+nav button {
   display: inline-block;
   width: 240px;
   height: 50px;
   border-radius: 25px;
   transition: all 0.15s ease-in;
   cursor: pointer;
-} */
-
-/* nav button:hover {
-  color: #000;
-  border-color: #aaa;
-} */
+}

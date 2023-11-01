@@ -1,5 +1,5 @@
 use super::{formation::{Formation,FormationProps, FormationStruct}, technos::{Technos,TechnosProps, TechnosStruct}, languages::{LanguageProps, LanguageStruct, Languages}, experience::{Experience,ExperienceProps, ExperienceStruct}}; 
-use crate::components::button::button::Button;
+use crate::components::button::button::DownloadButton;
 use yew::prelude::*;
 
 #[function_component(About)]
@@ -99,7 +99,7 @@ pub fn about() -> Html {
     };
 
     let experience_props = ExperienceProps{
-        category_title : "Experience".to_string(),
+        category_title : "Experiences and projects".to_string(),
         experiences : vec![
             ExperienceStruct{
                 key : 1,
@@ -148,7 +148,7 @@ pub fn about() -> Html {
         <div class="h-full min-h-screen min-h-full grid gap-2 content-center" id="about">
             <h1>{"Research engineer"}</h1>
             <div class="grid grid-rows-2 grid-cols-4 gap-4 grid-flow-row-dense">
-                <div class="col-span-2 row-span-1 border border-purple-700">
+                <div class="col-span-2 row-span-1">
                     <Formation
                         category_title={formation_props.category_title}
                         formations={formation_props.formations}
@@ -173,8 +173,8 @@ pub fn about() -> Html {
                     />
                 </div>
             </div>
-            <div class="flex flex-col justify-item-start h-1/6">
-                <Button name="DOWNLOAD RESUME"/>
+            <div class="flex flex-col justify-item-start h-1/6 py-8">
+                <DownloadButton name="DOWNLOAD RESUME" link="assets/resume_thomas_ung.pdf"/>
             </div>
         </div>
     }

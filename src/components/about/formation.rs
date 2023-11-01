@@ -24,25 +24,27 @@ pub fn formation(props: &FormationProps) -> Html {
     html! {
         <section class="h-full flex flex-col justify-start justify-items-center">
           <h2>{props.category_title.clone()}</h2>
-          {
-            props.clone().formations.
-            into_iter().map( |formation| {
-              html!{
-                  <div class="formation flex flex-row justify-item-center" key={formation.id}>
-                    <div class="">
-                      <FormationName name={formation.name} />
-                      <FormationDescription
-                        description={formation.description}
-                      />
+          <div class="grid gap-2">
+            {
+              props.clone().formations.
+              into_iter().map( |formation| {
+                html!{
+                    <div class="grid grid-cols-2 gap" key={formation.id}>
+                      <div class="">
+                        <FormationName name={formation.name} />
+                        <FormationDescription
+                          description={formation.description}
+                        />
+                      </div>
+                      <div class="grey-text">
+                        <FormationYear year={formation.year} />
+                        <FormationPlace place={formation.place} />
+                      </div>
                     </div>
-                    <div class="grey-text">
-                      <FormationYear year={formation.year} />
-                      <FormationPlace place={formation.place} />
-                    </div>
-                  </div>
-              }
-            }).collect::<Html>()
-          }
+                }
+              }).collect::<Html>()
+            }
+          </div>
         </section>
     }
 }
