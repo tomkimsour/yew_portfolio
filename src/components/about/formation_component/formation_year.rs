@@ -10,7 +10,7 @@ pub struct FormationYearProps{
 pub fn formation_year(props: &FormationYearProps) -> Html {
 
     html! {
-        <div class="formation-year">{props.year.clone()}</div>
+        <div>{props.year.clone()}</div>
     }
 }
 

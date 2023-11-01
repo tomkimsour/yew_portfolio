@@ -11,7 +11,7 @@ pub struct FormationDescriptionProps{
 pub fn formation_description(props: &FormationDescriptionProps) -> Html {
 
     html! {
-        <div class="formation-description">{props.description.clone()}</div>
+        <div>{props.description.clone()}</div>
     }
 }
 
