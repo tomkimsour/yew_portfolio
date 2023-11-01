@@ -22,7 +22,7 @@ pub fn experience(props: &ExperienceProps) -> Html {
           <h2 class="">{props.category_title.clone()}</h2>
           {props.experiences.iter().map( |experience| html!{
             <div id="experience" class="py-2" key={experience.key}>
-                <div class="title cyan-text">
+                <div id="cyan-text" class="title cyan-text">
                 {experience.title.clone()}
                 </div>
                 if !experience.description.is_empty(){

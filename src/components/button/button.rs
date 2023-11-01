@@ -9,9 +9,9 @@ pub struct ButtonProps {
 pub fn button(props: &ButtonProps) -> Html {
     html! {
         <div>
-        <button class="border-1 border-black text-black font-bold hover:bg-black hover:text-white  py-2 px-8 rounded-full">
-            {props.name.clone()}
-        </button>
+            <button class="border-b border-amber-950 text-black font-bold hover:bg-black hover:text-white py-2 px-7 rounded-full">
+                {props.name.clone()}
+            </button>
         </div>
     }
 }

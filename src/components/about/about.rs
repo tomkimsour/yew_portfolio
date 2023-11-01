@@ -1,4 +1,5 @@
-use super::{formation::{Formation,FormationProps, FormationStruct}, techno::{Techno,TechnoProps, TechnoStruct}, languages::{LanguageProps, LanguageStruct, Languages}, experience::{Experience,ExperienceProps, ExperienceStruct}}; 
+use super::{formation::{Formation,FormationProps, FormationStruct}, technos::{Technos,TechnosProps, TechnosStruct}, languages::{LanguageProps, LanguageStruct, Languages}, experience::{Experience,ExperienceProps, ExperienceStruct}}; 
+use crate::components::button::button::Button;
 use yew::prelude::*;
 
 #[function_component(About)]
@@ -31,10 +32,10 @@ pub fn about() -> Html {
         ],
     };
 
-    let technos_props = TechnoProps{
+    let technos_props = TechnosProps{
         category_title: "Technos".to_string(),
         technos: vec![
-            TechnoStruct{
+            TechnosStruct{
                 key: 1,
                 title:"Languages".to_string(),
                 names: vec![
@@ -49,7 +50,7 @@ pub fn about() -> Html {
                         "php".to_string()
                     ]
             },
-            TechnoStruct{
+            TechnosStruct{
                 key: 2,
                 title:"Tools & Frameworks".to_string(),
                 names: vec![
@@ -60,7 +61,7 @@ pub fn about() -> Html {
                     "tensorflow".to_string()
                     ]
             },
-            TechnoStruct{
+            TechnosStruct{
                 key:3,
                 title:"Database".to_string(),
                 names: vec![
@@ -144,36 +145,44 @@ pub fn about() -> Html {
     };
 
     html! {
-        <div class="h-full min-h-screen min-h-full" id="about">
-          <h1>{"Research Engineer"}</h1>
-          <div class="flex flex-row">
-          <div id="wrapper-left" class="flex flex-col w-6/12">
-            <Formation
-                category_title={formation_props.category_title}
-                formations={formation_props.formations}
-            />
-            <div class="flex flex-row w-full">
-                <div class="w-6/12">
-                    <Techno
+        // <div class="h-full min-h-screen min-h-full flex flex-col justify-stretch py-12" id="about">
+        <div class="h-full min-h-screen min-h-full grid gap-4 grid-col-2 content-center" id="about">
+            <h1>{"Research engineer"}</h1>
+            // <div class="flex flex-row grow">
+            <div class="grid grid-rows-4 grid-col-4 gap-4 conten-center">
+                // <div id="wrapper-left" class="flex flex-col w-7/12 grid justify-item-center">
+                    // <div class="h-6/12">
+                <div class="col-span-2 row-span-2">
+                    <Formation
+                        category_title={formation_props.category_title}
+                        formations={formation_props.formations}
+                    />
+                </div>
+                <div class="col-span-2 row-span-4">
+                    <Experience
+                        category_title={experience_props.category_title}
+                        experiences={experience_props.experiences}
+                    />
+                </div>
+                    // <div class="grid grid-col grid-col-2">
+                <div class="col-span-1 row-span-1">
+                    <Technos
                         category_title={technos_props.category_title}
                         technos={technos_props.technos}
                     />
                 </div>
-                <div class="w-6/12">
+                        // <div class="w-6/12">
+                <div class="col-span-1 row-span-1">
                     <Languages
                         category_title={language_props.category_title}
                         languages={language_props.languages}
                     />
                 </div>
+                // <div id="wrapper-right" class="w-3/12 pr-20">
             </div>
-          </div>
-          <div id="wrapper-right w-2/12 pr-20">
-            <Experience
-                category_title={experience_props.category_title}
-                experiences={experience_props.experiences}
-            />
-          </div>
-          </div>
+            <div class="flex flex-col justify-item-start h-1/6">
+                <Button name="DOWNLOAD RESUME"/>
+            </div>
         </div>
     }
 }

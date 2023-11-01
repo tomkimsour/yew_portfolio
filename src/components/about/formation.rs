@@ -22,13 +22,13 @@ pub struct FormationProps {
 #[styled_component(Formation)]
 pub fn formation(props: &FormationProps) -> Html {
     html! {
-        <section class="py-2">
+        <section class="h-full flex flex-col justify-start justify-items-center">
           <h2>{props.category_title.clone()}</h2>
           {
             props.clone().formations.
             into_iter().map( |formation| {
               html!{
-                  <div class="formation flex flex-row w-full" key={formation.id}>
+                  <div class="formation flex flex-row w-full justify-item-center h-1/3" key={formation.id}>
                     <div class="w-6/12">
                       <FormationName name={formation.name} />
                       <FormationDescription

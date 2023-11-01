@@ -20,7 +20,7 @@ pub fn languages(props: &LanguageProps) -> Html {
           <h2 class="">{props.category_title.clone()}</h2>
           {props.languages.iter().map( |language| html!{
               <div class="language" key={language.key}>
-                <div class="title cyan-text">
+                <div id="cyan-text" class="title cyan-text">
                   {language.name.clone()}
                 </div>
                 <div class="level">{language.level.clone()}</div>

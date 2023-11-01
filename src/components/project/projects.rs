@@ -34,11 +34,11 @@ pub fn projects() -> Html {
                     "Python".to_string(),
                 ],
                 year:"2021 - Now".to_string(),
-                url: "https://www.enib.fr/~robobreizh/src/en/index_en.html".to_string(),
+                url: "https://www.enib.fr/~robobreizh/src/en/project_home_en.html".to_string(),
             },
             ProjectProps{
                 key:2,
-                image: "assets/video_converter.png".to_string(),
+                image: "assets/othello.png".to_string(),
                 title: "Othello".to_string(),
                 description: "School project where the goal was to create an othello ai using min-max with alpha pruning algorithm".to_string(),
                 tech_list: vec![
@@ -50,7 +50,7 @@ pub fn projects() -> Html {
             },
             ProjectProps{
                 key:3,
-                image: "assets/othello.png".to_string(),
+                image: "assets/video_converter.png".to_string(),
                 title: "video converter".to_string(),
                 description: "This project was an introduction to cloud services. During the course we had to present a small state of the art of a field of cloud computing. This project was related to the course and we had to implement a video format converter that would scale up and down depending on the number of current requests.".to_string(),
                 tech_list: vec![

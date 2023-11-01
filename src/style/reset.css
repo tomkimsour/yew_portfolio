@@ -1,14 +1,20 @@
 @font-face {
-  font-family: NeueMontreal;
-  src: url("/fonts/PPNeueMontreal-Book.otf") format("opentype");
+  font-family: NeueMontreal-Regular;
+  src: url("/fonts/PPNeueMontreal-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: NeueMontreal-Medium;
+  src: url("/fonts/PPNeueMontreal-Medium.otf") format("opentype");
 }
 
 h1 {
-  font-size: 30pt;
+  font-size: 32pt;
+  padding-bottom: 1rem;
 }
 
 h2 {
   font-size: 18pt;
+  padding-bottom: 0.5rem;
 }
 
 h3 {
@@ -38,12 +44,11 @@ body {
   letter-spacing: 0pt;
   font-size: 14px;
   font-family:
-    "NeueMontreal",
+    "NeueMontreal-Regular",
     Inter,
     system-ui,
     -apple-system, /*Firefox supports this but not yet `system-ui`*/
     'Segoe UI', 
-    Roboto,
     Helvetica,
     Arial,
     sans-serif,
@@ -53,6 +58,9 @@ body {
 
 .cyan-text{
   color : #67AAED;
+}
+#cyan-text{
+  font-family: NeueMontreal-Medium;
 }
 
 .grey-text{
