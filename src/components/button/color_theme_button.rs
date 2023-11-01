@@ -17,7 +17,7 @@ pub fn color_theme_button() -> Html {
         // </div>
         <div class={floating_button_stylesheet}>
             <button class="border border-black bg-white text-black hover:bg-black hover:text-white py-2 px-7 rounded-full">
-                {"Light"}
+                {"Dark"}
             </button>
         </div>
         </>

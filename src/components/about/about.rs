@@ -88,7 +88,7 @@ pub fn about() -> Html {
         LanguageStruct{
             key:3,
             name:"German".to_string(),
-            level:"Elememtary".to_string()
+            level:"Elementary".to_string()
         },
         LanguageStruct{
             key:4,
