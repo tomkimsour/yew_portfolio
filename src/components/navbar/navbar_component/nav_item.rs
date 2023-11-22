@@ -1,4 +1,4 @@
-use stylist::{yew::styled_component,css,StyleSource};
+use stylist::yew::styled_component;
 use yew::prelude::*;
 
 #[derive(Properties, Clone, PartialEq)]
@@ -9,17 +9,9 @@ pub struct RefNavItemProps {
 
 #[styled_component(RefNavItem)]
 pub fn ref_nav_item(props: &RefNavItemProps) -> Html {
-    let button_stylesheet : StyleSource = css!(
-        r#"
-            padding-left : 15px;
-            padding-right: 15px;
-        "#
-    );
     html! {
-        <>
-            <li class="inline-block">
-                <a class={classes!(button_stylesheet)} href={props.to.clone()}>{props.name.clone()}</a>
-            </li>
-        </>
+            <a class="transition duration-200 transition-opacity color-inherit cursor-pointer opacity-60 hover:opacity-100 hover:decoration-inherit" href={props.to.clone()}>
+                {props.name.clone()}
+            </a>
     }
 }

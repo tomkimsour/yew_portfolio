@@ -1,9 +1,7 @@
 use yew::prelude::*;
 
 use crate::components::{
-    profile::profile::Profile,
-    about::about::About,
-    project::projects::Projects
+    about::about::About, profile::profile::Profile, project::projects::Projects,
 };
 
 #[function_component(Home)]

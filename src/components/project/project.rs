@@ -2,14 +2,14 @@ use stylist::yew::styled_component;
 use yew::prelude::*;
 
 #[derive(Properties, Clone, PartialEq)]
-pub struct ProjectProps{
-    pub key:u16,
-    pub image:String, 
+pub struct ProjectProps {
+    pub key: u16,
+    pub image: String,
     pub title: String,
-    pub description: String, 
+    pub description: String,
     pub tech_list: Vec<String>,
-    pub year: String, 
-    pub url: String, 
+    pub year: String,
+    pub url: String,
 }
 
 #[styled_component(Project)]

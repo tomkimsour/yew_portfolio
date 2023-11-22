@@ -1,12 +1,11 @@
-use stylist::{yew::styled_component};
+use stylist::yew::styled_component;
 use yew::prelude::*;
 
-use crate::components::project::project::{ProjectProps,Project};
-
+use crate::components::project::project::{Project, ProjectProps};
 
 #[derive(Clone, PartialEq)]
-struct ProjectsStruct{
-    projects : Vec<ProjectProps>
+struct ProjectsStruct {
+    projects: Vec<ProjectProps>,
 }
 
 #[styled_component(Projects)]
@@ -121,4 +120,3 @@ pub fn projects() -> Html {
         </>
     }
 }
-

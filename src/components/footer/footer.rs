@@ -1,6 +1,6 @@
 use stylist::yew::styled_component;
-use yew_hooks::prelude::*;
 use yew::prelude::*;
+use yew_hooks::prelude::*;
 
 #[styled_component(Footer)]
 pub fn footer() -> Html {
@@ -8,11 +8,11 @@ pub fn footer() -> Html {
     let clipboard = use_clipboard();
 
     let onclick_write_text = {
-      let clipboard = clipboard.clone();
-      Callback::from(move |_| {
-          clipboard.write_text(mail.to_owned());
-      })
-  };
+        let clipboard = clipboard.clone();
+        Callback::from(move |_| {
+            clipboard.write_text(mail.to_owned());
+        })
+    };
 
     html! {
      <footer id="contact" class="footer bg-black text-white px-110px px-24">

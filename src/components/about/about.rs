@@ -1,4 +1,9 @@
-use super::{formation::{Formation,FormationProps, FormationStruct}, technos::{Technos,TechnosProps, TechnosStruct}, languages::{LanguageProps, LanguageStruct, Languages}, experience::{Experience,ExperienceProps, ExperienceStruct}}; 
+use super::{
+    experience::{Experience, ExperienceProps, ExperienceStruct},
+    formation::{Formation, FormationProps, FormationStruct},
+    languages::{LanguageProps, LanguageStruct, Languages},
+    technos::{Technos, TechnosProps, TechnosStruct},
+};
 use crate::components::button::button::DownloadButton;
 use yew::prelude::*;
 
@@ -32,70 +37,71 @@ pub fn about() -> Html {
         ],
     };
 
-    let technos_props = TechnosProps{
+    let technos_props = TechnosProps {
         category_title: "Technos".to_string(),
         technos: vec![
-            TechnosStruct{
+            TechnosStruct {
                 key: 1,
-                title:"Languages".to_string(),
+                title: "Languages".to_string(),
                 names: vec![
-                        "c".to_string(),
-                        "c++".to_string(),
-                        "java".to_string(),
-                        "python".to_string(),
-                        "typescript".to_string(),
-                        "javascript".to_string(),
-                        "go".to_string(),
-                        "Rust".to_string(),
-                        "php".to_string()
-                    ]
+                    "c".to_string(),
+                    "c++".to_string(),
+                    "java".to_string(),
+                    "python".to_string(),
+                    "typescript".to_string(),
+                    "javascript".to_string(),
+                    "go".to_string(),
+                    "Rust".to_string(),
+                    "php".to_string(),
+                ],
             },
-            TechnosStruct{
+            TechnosStruct {
                 key: 2,
-                title:"Tools & Frameworks".to_string(),
+                title: "Tools & Frameworks".to_string(),
                 names: vec![
                     "docker".to_string(),
-                    "kubernetes".to_string(), 
-                    "ROS".to_string(), 
-                    "keras".to_string(), 
-                    "tensorflow".to_string()
-                    ]
+                    "kubernetes".to_string(),
+                    "ROS".to_string(),
+                    "keras".to_string(),
+                    "tensorflow".to_string(),
+                ],
             },
-            TechnosStruct{
-                key:3,
-                title:"Database".to_string(),
+            TechnosStruct {
+                key: 3,
+                title: "Database".to_string(),
                 names: vec![
                     "mysql".to_string(),
                     "postgresql".to_string(),
-                    "sqlite".to_string()
-                    ]
-            }
+                    "sqlite".to_string(),
+                ],
+            },
         ],
     };
 
-    let language_props = LanguageProps{
+    let language_props = LanguageProps {
         category_title: "Languages".to_string(),
-        languages : vec![LanguageStruct{
-            key:1,
-            name:"French".to_string(),
-            level:"Native".to_string()
-        },
-        LanguageStruct{
-            key:2,
-            name:"English".to_string(),
-            level:"Fluent".to_string()
-        },
-        LanguageStruct{
-            key:3,
-            name:"German".to_string(),
-            level:"Elementary".to_string()
-        },
-        LanguageStruct{
-            key:4,
-            name:"Mandarin".to_string(),
-            level:"Elementary".to_string()
-        }
-        ]
+        languages: vec![
+            LanguageStruct {
+                key: 1,
+                name: "French".to_string(),
+                level: "Native".to_string(),
+            },
+            LanguageStruct {
+                key: 2,
+                name: "English".to_string(),
+                level: "Fluent".to_string(),
+            },
+            LanguageStruct {
+                key: 3,
+                name: "German".to_string(),
+                level: "Elementary".to_string(),
+            },
+            LanguageStruct {
+                key: 4,
+                name: "Mandarin".to_string(),
+                level: "Elementary".to_string(),
+            },
+        ],
     };
 
     let experience_props = ExperienceProps{

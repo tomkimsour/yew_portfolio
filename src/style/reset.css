@@ -22,7 +22,7 @@ h3 {
 }
 
 p {
-  font-size: 10pt;
+  font-size: 12pt;
 }
 
 /* a {
@@ -64,4 +64,12 @@ body {
 
 .grey-text{
   color: #959595;
+}
+
+.page {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  height: 100vh;
+  
 }

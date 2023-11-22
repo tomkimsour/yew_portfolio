@@ -1,17 +1,17 @@
-use yew::prelude::*;
 use stylist::yew::styled_component;
+use yew::prelude::*;
 
 #[derive(Clone, PartialEq)]
 pub struct TechnosStruct {
-  pub key : u16,
-  pub title: String,
-  pub names: Vec<String>,
+    pub key: u16,
+    pub title: String,
+    pub names: Vec<String>,
 }
 
 #[derive(Properties, Clone, PartialEq)]
-pub struct TechnosProps{
-  pub category_title: String,
-  pub technos: Vec<TechnosStruct>,
+pub struct TechnosProps {
+    pub category_title: String,
+    pub technos: Vec<TechnosStruct>,
 }
 
 #[styled_component(Technos)]

@@ -34,16 +34,18 @@ pub fn navbar() -> Html {
         },
     ];
 
+    let nav_items = nav_items.into_iter().
+                        map(|nav_bar| {
+                        html!{<RefNavItem key={nav_bar.key} name={nav_bar.nav_item.name} to={nav_bar.nav_item.to}/>}
+                    }).collect::<Html>();
+
     html! {
         <>
-            <nav class="fixed w-full mt-0 pr-20 py-14 justify-end">
-              <ul class="list-none">
-                {
-                    nav_items.into_iter().map(|nav_bar| {
-                        html!{<RefNavItem key={nav_bar.key} name={nav_bar.nav_item.name} to={nav_bar.nav_item.to}/>}
-                    }).collect::<Html>()
-                }
-              </ul>
+            <nav class="z-50 grid box-border fixed w-full justify-end px-24 py-16">
+                <div class="spacer"></div>
+                <div class="m-auto grid gap-6 grid-flow-col">
+                    {nav_items}
+                </div>
             </nav>
         </>
     }

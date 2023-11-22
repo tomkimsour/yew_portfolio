@@ -31,7 +31,7 @@ pub fn experience(props: &ExperienceProps) -> Html {
                             {experience.description.clone()}
                         </div>
                     }
-                    
+
                     <div class="grey-text">{experience.technos.join(", ")}</div>
                 </div>
             }).collect::<Html>()

@@ -20,10 +20,10 @@ pub fn profile() -> Html {
                     <h1 class="font-bold">
                       {"Thomas UNG"}
                     </h1>
-                    <h2 class="pb-3">{"Research Engineer"}</h2>
+                    // <h2 class="pb-3">{"Research Engineer"}</h2>
                     <p>
                       {"
-                          Bonjour, bonjour! I'm a French research engineer working in the field of
+                          Bonjour, bonjour! I'm a French research software engineer working in the field of
                           robotics. On the side, I like to learn different things and do 
                           some sports. Feel free to browse around the website for more
                           more information.
