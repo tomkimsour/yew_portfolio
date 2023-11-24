@@ -1,5 +1,6 @@
 use portfolio::App;
+use yew::Renderer;
 
 fn main() {
-    yew::Renderer::<App>::new().render();
+    Renderer::<App>::new().render();
 }

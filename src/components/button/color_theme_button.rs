@@ -1,42 +1,70 @@
-use stylist::{yew::styled_component, StyleSource};
+use stylist::yew::styled_component;
+use web_sys::{console, window};
 use yew::prelude::*;
+
+#[derive(Copy, Clone)]
+struct DarkMode {
+    is_dark: bool,
+}
+
+impl DarkMode {
+    fn new() -> Self {
+        Self { is_dark: true }
+    }
+
+    fn is_dark(&self) -> bool {
+        self.is_dark
+    }
+
+    fn set_to_browser_setting(mut self) -> Self {
+        self.is_dark = window()
+            .expect("window is undefined")
+            .match_media("(prefers-color-scheme: dark)")
+            .expect("media query is undefined")
+            .unwrap()
+            .matches();
+        self
+    }
+}
 
 #[styled_component(ColorThemeButton)]
 pub fn color_theme_button() -> Html {
-    /*
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    document.documentElement.classList.add('dark')
-    } else {
-    document.documentElement.classList.remove('dark')
-    }
+    let dark_mode = use_state(|| {
+        let dark_mode = DarkMode::new().set_to_browser_setting();
+        dark_mode
+    });
+    let on_click_toggle_dark_mode = {
+        let dark_mode = dark_mode.clone();
+        Callback::from(move |_| {
+            let window = web_sys::window().expect("no global `window` exists");
+            let document = window.document().expect("should have a document on window");
+            let root = document
+                .document_element()
+                .expect("document should have a root element");
 
-    // Whenever the user explicitly chooses light mode
-    localStorage.theme = 'light'
+            if dark_mode.is_dark() {
+                root.set_attribute("data-theme", "light")
+                    .expect("Failed to set attribute");
+            } else {
+                root.set_attribute("data-theme", "dark")
+                    .expect("Failed to set attribute");
+            }
+            dark_mode.set(DarkMode {
+                is_dark: !dark_mode.is_dark(),
+            })
+        })
+    };
 
-    // Whenever the user explicitly chooses dark mode
-    localStorage.theme = 'dark'
-
-    // Whenever the user explicitly chooses to respect the OS preference
-    localStorage.removeItem('theme')
-    */
-    let floating_button_stylesheet: StyleSource = css!(
-        r#"
-            position: fixed;
-            bottom: 7%;
-            right: 5%;
-            z-index: 50;
-        "#
-    );
     html! {
         <>
-        // <div class="relative h-32 w-32">
-        //     <div class="absolute bottom-0 right-0 h-16 w-16">{"09"}</div>
-        // </div>
-        <div class={floating_button_stylesheet}>
-            <button class="border border-black bg-white text-black hover:bg-black hover:text-white py-2 px-7 rounded-full">
-                {"Dark"}
-            </button>
+        <div class="fixed z-50 bottom-0 right-0 pr-24 pb-16">
+                <button onclick={on_click_toggle_dark_mode} class="border border-content bg-transparent text-content hover:bg-content hover:text-bkg py-1 px-7 rounded-full">
+                    if dark_mode.is_dark() {
+                        {"Light"}
+                    } else {
+                        {"Dark"}
+                    }
+                </button>
         </div>
         </>
     }

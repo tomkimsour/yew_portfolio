@@ -7,11 +7,15 @@ module.exports = {
   content: [
     "src/**/*.rs",
     "index.html",
-    // "./input/tailwind.css",
   ],
   darkMode: 'class', // 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        bkg: "var(--c-bg)",
+        content: "var(--c-content)",
+      }
+    },
   },
   variants: {
     extend: {},

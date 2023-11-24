@@ -21,7 +21,7 @@ pub fn profile() -> Html {
                       {"Thomas UNG"}
                     </h1>
                     // <h2 class="pb-3">{"Research Engineer"}</h2>
-                    <p>
+                    <p class="opacity-70">
                       {"
                           Bonjour, bonjour! I'm a French research software engineer working in the field of
                           robotics. On the side, I like to learn different things and do 

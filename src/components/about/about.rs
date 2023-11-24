@@ -145,8 +145,7 @@ pub fn about() -> Html {
                 technos: vec![
                     "Go".to_string()
                 ],
-            }
-            
+            },
         ]
     };
 

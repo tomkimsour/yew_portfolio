@@ -14,12 +14,6 @@ pub struct ProjectProps {
 
 #[styled_component(Project)]
 pub fn project(props: &ProjectProps) -> Html {
-    // let button_stylesheet : StyleSource = css!(
-    //     r#"
-    //         padding-left : 15px;
-    //         padding-right: 15px;
-    //     "#
-    // );
     html! {
         <>
                 <div class="group relative">

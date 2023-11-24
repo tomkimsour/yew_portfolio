@@ -12,5 +12,11 @@ stylist = { version = "0.13", features = ["yew"]}
 serde = { version = "1" }
 serde_json = { version = "1" , features = ["std"]}
 gloo = { version = "0.10" }
-web-sys = {version = "0.3.60"}
 yew-hooks = {version = "0.3.0"}
+
+[dependencies.web-sys]
+version = "0.3.60"
+
+features = [
+    "Window","console","Document","MediaQueryList","DomTokenList", "Element", "HtmlElement","MouseEvent","DomRect",
+]
