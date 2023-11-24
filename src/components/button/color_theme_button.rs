@@ -1,5 +1,5 @@
 use stylist::yew::styled_component;
-use web_sys::{console, window};
+use web_sys::window;
 use yew::prelude::*;
 
 #[derive(Copy, Clone)]
@@ -52,6 +52,39 @@ pub fn color_theme_button() -> Html {
             dark_mode.set(DarkMode {
                 is_dark: !dark_mode.is_dark(),
             })
+
+            // @ts-expect-error: Transition API
+            // let transition = document.start_view_transition(|| {
+            //     dark_mode.set(DarkMode {
+            //         is_dark: !dark_mode.is_dark(),
+            //     });
+            // });
+            // const transition = document.startViewTransition(async () => {
+            //     isDark.value = !isDark.value
+            //     await nextTick()
+            // })
+            // transition.ready
+            //     .then(() => {
+            //     const clipPath = [
+            //         `circle(0px at ${x}px ${y}px)`,
+            //         `circle(${endRadius}px at ${x}px ${y}px)`,
+            //     ]
+            //     document.documentElement.animate(
+            //         {
+            //         clipPath: isDark.value
+            //             ? [...clipPath].reverse()
+            //             : clipPath,
+            //         },
+            //         {
+            //         duration: 400,
+            //         easing: 'ease-out',
+            //         pseudoElement: isDark.value
+            //             ? '::view-transition-old(root)'
+            //             : '::view-transition-new(root)',
+            //         },
+            //     )
+            //     })
+            // dark_mode
         })
     };
 

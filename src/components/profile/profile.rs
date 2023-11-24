@@ -25,8 +25,8 @@ pub fn profile() -> Html {
                       {"
                           Bonjour, bonjour! I'm a French research software engineer working in the field of
                           robotics. On the side, I like to learn different things and do 
-                          some sports. Feel free to browse around the website for more
-                          more information.
+                          some sports. Feel free to browse the website for more
+                          information.
                       "}
                     </p>
                   </div>

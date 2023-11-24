@@ -18,5 +18,5 @@ yew-hooks = {version = "0.3.0"}
 version = "0.3.60"
 
 features = [
-    "Window","console","Document","MediaQueryList","DomTokenList", "Element", "HtmlElement","MouseEvent","DomRect",
+    "Window","console","Document","MediaQueryList","DomTokenList", "Element", "HtmlElement","MouseEvent","DomRect","ViewTransition",
 ]

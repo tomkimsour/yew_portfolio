@@ -50,7 +50,7 @@ pub fn projects() -> Html {
             ProjectProps{
                 key:3,
                 image: "assets/video_converter.png".to_string(),
-                title: "video converter".to_string(),
+                title: "Cloud video converter".to_string(),
                 description: "This project was an introduction to cloud services. During the course we had to present a small state of the art of a field of cloud computing. This project was related to the course and we had to implement a video format converter that would scale up and down depending on the number of current requests.".to_string(),
                 tech_list: vec![
                     "React".to_string(),
