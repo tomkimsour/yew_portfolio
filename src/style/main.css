@@ -2,32 +2,56 @@
   font-family: NeueMontreal-Regular;
   src: url("/fonts/PPNeueMontreal-Regular.otf") format("opentype");
 }
+
 @font-face {
   font-family: NeueMontreal-Medium;
   src: url("/fonts/PPNeueMontreal-Medium.otf") format("opentype");
 }
 
 h1 {
-  font-size: 32pt;
+  font-size: 40pt;
   padding-bottom: 1rem;
 }
 
 h2 {
-  font-size: 18pt;
+  font-size: 28pt;
   padding-bottom: 0.5rem;
 }
 
 h3 {
-  font-size: 16pt;
+  font-size: 26pt;
 }
 
 p {
-  font-size: 12pt;
+  font-size: 22pt;
+}
+a {
+  font-size: 22pt;
 }
 
-/* a {
-  font-size: 10pt;
-} */
+@media (min-width : 1024px) {
+  h1 {
+    font-size: 32pt;
+    padding-bottom: 1rem;
+  }
+
+  h2 {
+    font-size: 18pt;
+    padding-bottom: 0.5rem;
+  }
+
+  h3 {
+    font-size: 16pt;
+  }
+
+  p {
+    font-size: 11pt;
+  }
+  a {
+    font-size: 11pt;
+  }
+}
+
 
 * {
   margin: 0;
@@ -46,8 +70,9 @@ body {
     "NeueMontreal-Regular",
     Inter,
     system-ui,
-    -apple-system, /*Firefox supports this but not yet `system-ui`*/
-    'Segoe UI', 
+    -apple-system,
+    /*Firefox supports this but not yet `system-ui`*/
+    'Segoe UI',
     Helvetica,
     Arial,
     sans-serif,
@@ -55,14 +80,15 @@ body {
     'Segoe UI Emoji';
 }
 
-.cyan-text{
-  color : #67AAED;
+.cyan-text {
+  color: #67AAED;
 }
-.cyan-text{
+
+.cyan-text {
   font-family: NeueMontreal-Medium;
 }
 
-.grey-text{
+.grey-text {
   color: #959595;
 }
 
@@ -71,30 +97,8 @@ body {
   align-items: left;
   flex-direction: column;
   height: 100vh;
-  
+
 }
-/* :root {
-  --c-bg: #fff;
-  --c-scrollbar: #eee;
-  --c-scrollbar-hover: #bbb;
-}
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar:horizontal {
-  height: 6px;
-}
-::-webkit-scrollbar-track, ::-webkit-scrollbar-corner {
-  background: var(--c-bg);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-  background: var(--c-scrollbar);
-  border-radius: 10px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--c-scrollbar-hover);
-} */
 
 @layer base {
   :root {
@@ -104,10 +108,10 @@ body {
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-      --c-bg: #000;
-      --c-content: #fff;
-    }
+  :root {
+    --c-bg: #000;
+    --c-content: #fff;
+  }
 }
 
 :root[data-theme="light"] {

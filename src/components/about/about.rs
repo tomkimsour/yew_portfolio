@@ -150,28 +150,28 @@ pub fn about() -> Html {
     };
 
     html! {
-        <div class="h-full min-h-screen min-h-full grid gap-2 content-center" id="about">
+        <div class=" px-16 lg:px-0 h-full min-h-0 lg:min-h-screen min-h-full grid gap-2 content-center" id="about">
             <h1>{"Research engineer"}</h1>
-            <div class="grid grid-rows-2 grid-cols-4 gap-4 grid-flow-row-dense">
-                <div class="col-span-2 row-span-1">
+            <div class="grid grid-rows-1 lg:grid-rows-2 grid-cols-1 lg:grid-cols-4 gap-20 lg:gap-4 grid-flow-row-dense">
+                <div class="lg:col-span-2 lg:row-span-1">
                     <Formation
                         category_title={formation_props.category_title}
                         formations={formation_props.formations}
                     />
                 </div>
-                <div class="col-span-2 row-span-2">
+                <div class="lg:col-span-2 lg:row-span-2">
                     <Experience
                         category_title={experience_props.category_title}
                         experiences={experience_props.experiences}
                     />
                 </div>
-                <div class="row-span-1">
+                <div class="lg:row-span-1">
                     <Technos
                         category_title={technos_props.category_title}
                         technos={technos_props.technos}
                     />
                 </div>
-                <div class="row-span-1">
+                <div class="lg:row-span-1">
                     <Languages
                         category_title={language_props.category_title}
                         languages={language_props.languages}

@@ -25,10 +25,10 @@ pub fn technos(props: &TechnosProps) -> Html {
       {
         technos.iter().map(|techno| html!{
           <div key={techno.key}>
-            <div class="cyan-text">
+            <p class="cyan-text">
               {techno.title.clone()}
-            </div>
-            <div>{techno.names.join(" - ")}</div>
+            </p>
+            <p>{techno.names.join(" - ")}</p>
           </div>
         }).collect::<Html>()
       }

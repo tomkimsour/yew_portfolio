@@ -9,6 +9,6 @@ pub struct FormationNameProps {
 #[styled_component(FormationName)]
 pub fn formation_name(props: &FormationNameProps) -> Html {
     html! {
-        <div class="cyan-text">{props.name.clone()}</div>
+        <p class="cyan-text">{props.name.clone()}</p>
     }
 }

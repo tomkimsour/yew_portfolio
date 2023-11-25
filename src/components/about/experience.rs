@@ -23,16 +23,16 @@ pub fn experience(props: &ExperienceProps) -> Html {
           <div class="w-5/6 grid gap-2">
             {props.experiences.iter().map( |experience| html!{
                 <div id="experience" key={experience.key}>
-                    <div class="title cyan-text">
+                    <p class="cyan-text">
                     {experience.title.clone()}
-                    </div>
+                    </p>
                     if !experience.description.is_empty(){
-                        <div>
+                        <p>
                             {experience.description.clone()}
-                        </div>
+                        </p>
                     }
 
-                    <div class="grey-text">{experience.technos.join(", ")}</div>
+                    <p class="grey-text">{experience.technos.join(", ")}</p>
                 </div>
             }).collect::<Html>()
             }

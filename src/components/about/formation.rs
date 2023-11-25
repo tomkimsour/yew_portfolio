@@ -29,7 +29,7 @@ pub fn formation(props: &FormationProps) -> Html {
               props.clone().formations.
               into_iter().map( |formation| {
                 html!{
-                    <div class="grid grid-cols-2 gap" key={formation.id}>
+                    <div class="flex flex-col lg:grid lg:grid-cols-2" key={formation.id}>
                       <div>
                         <FormationName name={formation.name} />
                         <FormationDescription

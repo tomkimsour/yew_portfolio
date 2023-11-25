@@ -106,8 +106,8 @@ pub fn projects() -> Html {
     html! {
         <>
             <div id="project" class="flex flex-col flex-nowrap box-border px-110px min-h-screen  min-h-full">
-                <h1>{"Selected projects"}</h1>
-                <div class="grid grid-cols-3 gap-y-10 gap-x-6">
+                <h1 class="px-16 lg:px-0">{"Selected projects"}</h1>
+                <div class="grid grid-cols-1   lg:grid-cols-3 gap-y-10 md:gap-x-6">
                 {
                     projects.projects.iter().map(|project|{
                         html!(

@@ -90,7 +90,7 @@ pub fn color_theme_button() -> Html {
 
     html! {
         <>
-        <div class="fixed z-50 bottom-0 right-0 pr-24 pb-16">
+        <div class="hidden lg:flex fixed z-50 bottom-0 right-0 pr-24 pb-16">
                 <button onclick={on_click_toggle_dark_mode} class="border border-content bg-transparent text-content hover:bg-content hover:text-bkg py-1 px-7 rounded-full">
                     if dark_mode.is_dark() {
                         {"Light"}

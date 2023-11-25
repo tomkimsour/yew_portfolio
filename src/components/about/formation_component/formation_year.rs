@@ -9,6 +9,6 @@ pub struct FormationYearProps {
 #[styled_component(FormationYear)]
 pub fn formation_year(props: &FormationYearProps) -> Html {
     html! {
-        <div>{props.year.clone()}</div>
+        <p>{props.year.clone()}</p>
     }
 }

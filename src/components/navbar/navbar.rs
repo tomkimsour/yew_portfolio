@@ -41,7 +41,7 @@ pub fn navbar() -> Html {
 
     html! {
         <>
-            <nav class="z-50 grid box-border fixed w-full justify-end px-24 py-16 text-content">
+            <nav class="hidden lg:grid z-50 box-border fixed w-full justify-end px-24 py-1 md:py-16 text-content">
                 <div class="spacer"></div>
                 <div class="m-auto grid gap-6 grid-flow-col">
                     {nav_items}

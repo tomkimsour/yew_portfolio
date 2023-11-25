@@ -9,6 +9,6 @@ pub struct FormationPlaceProps {
 #[styled_component(FormationPlace)]
 pub fn formation_place(props: &FormationPlaceProps) -> Html {
     html! {
-        <div>{props.place.clone()}</div>
+        <p>{props.place.clone()}</p>
     }
 }

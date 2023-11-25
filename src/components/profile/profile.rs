@@ -4,8 +4,8 @@ use yew::prelude::*;
 pub fn profile() -> Html {
     html! {
         <>
-            <div class=" flex flex-nowrap box-border px-110px min-h-screen">
-              <div class="w-6/12 h-full">
+            <div class=" flex flex-nowrap flex-col lg:flex-row box-border px-110px lg:min-h-screen">
+              <div class="w-full lg:w-6/12 h-full">
                 <div id="profile-image-wrapper" class="overflow-hidden pt-32 px-12">
                   <img
                     class="object-cover"
@@ -14,13 +14,12 @@ pub fn profile() -> Html {
                   />
                 </div>
               </div>
-              <div class="w-6/12 h-full">
-                <div class="pt-40 pl-4">
+              <div class="min-w-full lg:min-w-min  lg:w-6/12 h-full px-16 lg:px-0 py-20 lg:py-0">
+                <div class="lg:pt-40 lg:pl-4">
                   <div class="">
                     <h1 class="font-bold">
                       {"Thomas UNG"}
                     </h1>
-                    // <h2 class="pb-3">{"Research Engineer"}</h2>
                     <p class="opacity-70">
                       {"
                           Bonjour, bonjour! I'm a French research software engineer working in the field of
