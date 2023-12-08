@@ -74,8 +74,8 @@ pub fn projects() -> Html {
                     "Python".to_string(),
                     "Rust".to_string(),
                 ],
-                year:"2020 - 2022".to_string(),
-                url: "https://github.com/tomkimsour/video-converter".to_string(),
+                year:"2020 - 2023".to_string(),
+                url: "https://github.com/tomkimsour/advent_of_code_2023_rs".to_string(),
             },
             ProjectProps{
                 key:5,
